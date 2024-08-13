@@ -147,7 +147,7 @@ button.secondary:hover {
   outline-color: var(--hx-border-200);
 }
 button.small {
-  padding: 10px 12px;
+  padding: 10px 11px;
   font-size: .875rem;
 }
 button.small span.button_content {
@@ -157,21 +157,10 @@ button.small .button_suffix svg {
   height: 16px;
   width: 14px;
 }
-label {
-  color: var(--hx-text-200);
-}
 p {
   font-size: 1rem;
   margin: 20px 0px;
   color: var(--hx-text-100);
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 main {
   display: flex;
@@ -198,6 +187,9 @@ main .wrapper {
 .container:nth-of-type(2), .container:nth-of-type(4) {
   border-right: none;
 }
+.container:nth-of-type(3), .container:nth-of-type(4) {
+  border-bottom: none;
+}
 .container_inner {
   display: flex;
   flex-direction:row;
@@ -211,6 +203,7 @@ main .wrapper {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 1;
 }
 .app-repo button {
   border-radius: 0px;
@@ -235,7 +228,6 @@ main .wrapper {
   margin: 0;
   margin-left: 12px;
 }
-// Add project-spesific styles here
 @media (max-width: 1200px) {
   main .wrapper {
     grid-template-columns: 1fr;
@@ -247,9 +239,6 @@ main .wrapper {
   .container {
     border-bottom: 1px solid var(--hx-border-100);
     max-width: 100vw;
-  }
-  .app {
-    padding: 0px 50px;
   }
 }
 @media (max-width: 600px) {
@@ -278,6 +267,9 @@ main .wrapper {
   .container:first-of-type {
     height: calc(100svh - 68px);
     height: calc(100vh - 68px);
+  }
+  .container_inner {
+    margin-top: 56px;
   }
   .app-name {
     height: 56px;
